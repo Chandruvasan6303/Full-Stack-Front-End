@@ -68,11 +68,6 @@
         </tbody>
       </table>
     </div>
-    <!-- <div class="form-group">
-      <label for="searchId">Search by ID:</label>
-      <input type="text" v-model="searchId" class="form-control" placeholder="Enter Student ID">
-      <button @click="searchById" class="btn btn-primary">Search</button>
-    </div> -->
   </div>
 </template>
 
