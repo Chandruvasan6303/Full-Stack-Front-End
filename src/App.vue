@@ -6,31 +6,31 @@
     <form @submit.prevent="submitForm" class="registration-form">
       <div class="form-group">
         <label for="name">NAME:</label>
-        <input type="text" v-model="student.name" class="form-control" required placeholder="Enter Patient Name:">
+        <input type="text" v-model="student.name" class="form-control" required placeholder="Enter Student Name:">
       </div>
 
       <div class="form-group">
-        <label for="id">ID:</label>
-        <input type="text" v-model="student.Student_ID" class="form-control" required placeholder="Enter Patient ID:">
+        <label for="id">STUDENT ID:</label>
+        <input type="text" v-model="student.Student_ID" class="form-control" required placeholder="Enter Student ID:">
       </div>
 
       <div class="form-group">
-        <label for="department">CONSULT DOCTOR:</label>
-        <input type="text" v-model="student.Department" class="form-control" required placeholder="Enter Consult Doctor:">
+        <label for="department">DEPARTMENT:</label>
+        <input type="text" v-model="student.Department" class="form-control" required placeholder="Enter Student Department:">
       </div>
 
       <div class="form-group">
         <label for="phone">PHONE:</label>
-        <input type="text" v-model="student.phone" class="form-control" required placeholder="Enter Patient Phone:">
+        <input type="text" v-model="student.phone" class="form-control" required placeholder="Enter Student Phone:">
       </div>
 
       <div class="form-group">
-        <label for="sslcMark">COMPLAINT:</label>
-        <input type="text" v-model="student.sslcMark" class="form-control" required placeholder="Enter Patient Complaint:">
+        <label for="sslcMark">SSLC MARK:</label>
+        <input type="text" v-model="student.sslcMark" class="form-control" required placeholder="Enter SSLC Mark:">
       </div>
       <div class="form-group">
-        <label for="hscMark">LAST TREATEMENT:</label>
-        <input type="text" v-model="student.hscMark" class="form-control" required placeholder="Last Treatement of Patient:">
+        <label for="hscMark">HSC MARK:</label>
+        <input type="text" v-model="student.hscMark" class="form-control" required placeholder="Enter HSC Mark:">
       </div>
 
       <button type="submit" class="btn-primary">
@@ -44,11 +44,11 @@
         <thead>
           <tr class = "Top_Table">
             <th>NAME</th>
-            <th>ID</th>
-            <th>CONSULT DOCTOR</th>
+            <th>STUDENT ID</th>
+            <th>DEPARTMENT</th>
             <th>PHONE</th>
-            <th>COMPLAINT</th>
-            <th>LAST TREATEMENT</th>
+            <th>SSLC MARK</th>
+            <th>HSC MARK</th>
             <th>ACTIONS</th>
           </tr>
         </thead>
@@ -127,16 +127,6 @@ export default {
         console.error('Error registering student', error);
       }
     },
-
-    // async searchById() {
-    //   try {
-    //     const response = await this.$axios.get(`http://localhost:8000/api/searchStudent/${this.searchId}`);
-    //     this.registeredStudents = [response.data]; // Assuming the response is a single student
-    //     console.log(response.data);
-    //   } catch (error) {
-    //     console.error('Error searching student by ID', error);
-    //   }
-    // },
     async fetchRegisteredStudents() {
       try {
         const response = await this.$axios.get('http://localhost:8000/api/registeredStudents');
