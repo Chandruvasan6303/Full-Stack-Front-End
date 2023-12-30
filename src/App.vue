@@ -1,7 +1,7 @@
 <template>
   <div class="registration-container">
     <span>
-    <h2 class="page-title">{{ editingStudent ? 'EDIT USER' : 'CASE REGISTRATION' }}</h2>
+    <h2 class="page-title">{{ editingStudent ? 'EDIT STUDENT' : 'STUDENT REGISTRATION' }}</h2>
   </span>
     <form @submit.prevent="submitForm" class="registration-form">
       <div class="form-group">
@@ -38,7 +38,7 @@
       </button>
     </form>
 
-    <h2 class="page-title">REGISTERED CASE</h2>
+    <h2 class="page-title">REGISTERED STUDENT</h2>
     <div class="table-container">
       <table class="registered-students">
         <thead>
